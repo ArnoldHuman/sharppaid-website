@@ -1,23 +1,26 @@
 :root {
-  --brand: #e65100;
-  --brand-dark: #b53d00;
-  --text: #1f1b16;
-  --muted: #5f5650;
+  --brand: #0b6e4f;
+  --on-brand: #ffffff;
+  --brand-dark: #08553d;
+  --gold: #f2c14e;
+  --text: #10241c;
+  --muted: #4f5d56;
   --surface: #ffffff;
-  --surface-alt: #fff4ec;
-  --border: #ecdcd0;
+  --surface-alt: #f3f6f2;
+  --border: #dbe5de;
   color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --brand: #ff8a50;
-    --brand-dark: #ffb08a;
-    --text: #f2e9e3;
-    --muted: #c4b6ad;
-    --surface: #1a1714;
-    --surface-alt: #26201b;
-    --border: #3b322b;
+    --brand: #f2c14e;
+    --on-brand: #2a2000;
+    --brand-dark: #6fd3a8;
+    --text: #e8efea;
+    --muted: #a9b8b0;
+    --surface: #111a16;
+    --surface-alt: #18241f;
+    --border: #2a3a33;
   }
 }
 
@@ -34,6 +37,25 @@ body {
 
 a {
   color: var(--brand-dark);
+}
+
+/* Brand green in both light and dark mode, underlined in gold */
+.topbar {
+  background: #0b6e4f;
+  border-bottom: 3px solid var(--gold);
+}
+
+.topbar .brand {
+  color: #ffffff;
+}
+
+.topbar nav a:not(.button) {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.topbar .button {
+  background: var(--gold);
+  color: #2a2000;
 }
 
 .top {
@@ -100,9 +122,8 @@ h3 {
   margin: 0 0 16px;
   padding: 4px 14px;
   border-radius: 999px;
-  background: var(--surface-alt);
-  border: 1px solid var(--border);
-  color: var(--brand-dark);
+  background: var(--gold);
+  color: #2a2000;
   font-weight: 600;
   font-size: 0.9rem;
 }
@@ -127,7 +148,7 @@ h3 {
   padding: 12px 22px;
   border-radius: 999px;
   background: var(--brand);
-  color: #fff;
+  color: var(--on-brand);
   font-weight: 600;
   text-decoration: none;
 }
