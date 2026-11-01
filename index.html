@@ -1,125 +1,110 @@
 <!doctype html>
 <html lang="en-ZA">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SharpPaid · Get paid for every job</title>
-  <meta name="description" content="SharpPaid helps South African electricians, plumbers, builders and handymen get paid faster: quotes customers accept on their phone, tax invoices in one tap, and reminders that do the chasing.">
-  <meta name="theme-color" content="#0b6e4f">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SharpPaid · Get paid for every job</title>
+<meta name="description" content="SharpPaid helps South African electricians, plumbers, builders and handymen get paid faster: quotes customers accept on their phone, tax invoices in one tap, and reminders that do the chasing.">
+<meta name="theme-color" content="#0b6e4f">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="topbar">
-    <header class="top">
-      <a class="brand" href="/"><img src="favicon.svg" alt="" width="32" height="32"> SharpPaid</a>
-      <nav>
-        <a href="#how">How it works</a>
-        <a href="#contact">Contact</a>
-        <a class="button small" href="mailto:help@sharppaid.co.za?subject=SharpPaid%20early%20access">Get early access</a>
-      </nav>
-    </header>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="ink" x="-10%" y="-10%" width="120%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.4" result="rough"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="1" seed="3" result="spots"/>
+    <feColorMatrix in="spots" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -0.9 1.45" result="mask"/>
+    <feComposite in="rough" in2="mask" operator="in"/>
+  </filter>
+  <symbol id="slip" viewBox="0 0 64 64">
+    <path d="M15 7h34v44l-4.25 5-4.25-5-4.25 5-4.25-5-4.25 5-4.25-5-4.25 5-4.25-5Z" fill="#fff" stroke="#0b6e4f" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M21 16h14M21 22h22" stroke="#d9cfbd" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M22 35l6.5 6.5L43 27" fill="none" stroke="#0b6e4f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M22 35l6.5 6.5L43 27" fill="none" stroke="#f2c14e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><svg width="36" height="36"><use href="#slip"/></svg><span>Sharp<b>Paid</b></span></a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#contact">Contact</a>
+      <a class="btn small gold" href="mailto:help@sharppaid.co.za?subject=SharpPaid%20early%20access">Get early access</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <p class="kicker"><span>Coming soon</span>Made in South Africa</p>
+      <h1>Do the job.<br>Get paid.<br><span class="underline">Sharp sharp.</span></h1>
+      <p class="lead">SharpPaid sends the quote, the invoice and the polite reminders, so you spend less time chasing
+        money and more time on the tools.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:help@sharppaid.co.za?subject=SharpPaid%20early%20access">Get early access</a>
+        <a class="text" href="#how">See how it works</a>
+      </div>
+    </div>
+
+    <div class="slip" aria-hidden="true">
+      <div class="slip-head"><strong>Tax invoice</strong><span>INV-0042</span></div>
+      <table>
+        <tr><td>Geyser element, 3 kW</td><td class="amt">R450,00</td></tr>
+        <tr><td>Thermostat</td><td class="amt">R285,00</td></tr>
+        <tr><td>Labour <span class="handwritten">2½ hrs</span></td><td class="amt">R900,00</td></tr>
+        <tr><td>Call-out</td><td class="amt">R350,00</td></tr>
+        <tr><td>VAT 15%</td><td class="amt">R297,75</td></tr>
+        <tr class="total"><td>Total</td><td class="amt">R2 282,75</td></tr>
+      </table>
+      <p class="mono" style="margin:10px 0 0">Mrs Naidoo · 14 Kloof Rd, Gardens</p>
+      <div class="stamp">PAID</div>
+    </div>
   </div>
 
-  <main>
-    <section class="hero">
-      <p class="badge">Coming soon</p>
-      <h1>Do the job. Get paid. Sharp&nbsp;sharp.</h1>
-      <p class="lead">
-        SharpPaid sends the quote, the invoice and the polite reminders, so you spend less time chasing money
-        and more time on the tools.
-      </p>
-      <p class="actions">
-        <a class="button" href="mailto:help@sharppaid.co.za?subject=SharpPaid%20early%20access">Get early access</a>
-        <a class="link" href="#how">See how it works</a>
-      </p>
-      <p class="note">Made in South Africa for electricians, plumbers, builders and handymen.</p>
-    </section>
-
-    <section id="how" class="features">
+  <section class="section" id="how">
+    <div class="wrap">
       <h2>From quote to money in the bank</h2>
-      <div class="grid">
-        <article>
-          <h3>1. Quote from your phone</h3>
-          <p>Price the job on site and send the quote on WhatsApp or by email before you've left the driveway.</p>
-        </article>
-        <article>
-          <h3>2. Accepted with one tap</h3>
-          <p>Your customer opens the quote on their phone and accepts it. Ask for a deposit up front, so you're
-            not paying for materials out of your own pocket.</p>
-        </article>
-        <article>
-          <h3>3. Invoice the moment you're done</h3>
-          <p>Turn the quote into an invoice in one tap. VAT-registered? 15% VAT and proper tax invoices are
-            handled for you.</p>
-        </article>
-        <article>
-          <h3>4. Easy to pay</h3>
-          <p>Every invoice has a "Pay now" button for card or instant EFT, plus your bank details with the
-            invoice number as the reference.</p>
-        </article>
-        <article>
-          <h3>5. Reminders do the chasing</h3>
-          <p>When an invoice is late, SharpPaid sends a friendly reminder for you. No awkward phone calls.</p>
-        </article>
-        <article>
-          <h3>6. Know who owes you</h3>
-          <p>One screen shows what's outstanding, what's overdue and what's been paid this month.</p>
-        </article>
-      </div>
-    </section>
+      <p class="intro">Six steps, from the driveway to your bank account. SharpPaid handles the paperwork in between.</p>
+      <ol class="lines">
+        <li><span class="no">01</span><h3>Quote from your phone</h3><p>Price the job on site and send the quote on WhatsApp or by email before you've left the driveway.</p></li>
+        <li><span class="no">02</span><h3>Accepted with one tap</h3><p>Your customer opens the quote on their phone and accepts it. Ask for a deposit up front, so you're not paying for materials out of your own pocket.</p></li>
+        <li><span class="no">03</span><h3>Invoice the moment you're done</h3><p>Turn the quote into an invoice in one tap. VAT-registered? 15% VAT and proper tax invoices are handled for you.</p></li>
+        <li><span class="no">04</span><h3>Easy to pay</h3><p>Every invoice has a "Pay now" button for card or instant EFT, plus your bank details with the invoice number as the reference.</p></li>
+        <li><span class="no">05</span><h3>Reminders do the chasing</h3><p>When an invoice is late, SharpPaid sends a friendly reminder for you. No awkward phone calls.</p></li>
+        <li><span class="no">06</span><h3>Know who owes you</h3><p>One screen shows what's outstanding, what's overdue and what's been paid this month.</p></li>
+      </ol>
+    </div>
+  </section>
 
-    <section class="features">
+  <section class="section">
+    <div class="wrap">
       <h2>And everything else the job needs</h2>
-      <div class="grid">
-        <article>
-          <h3>Jobs and scheduling</h3>
-          <p>A simple two-week schedule. Add the customer, address and time; tap the address for directions.</p>
-        </article>
-        <article>
-          <h3>Stock in every bakkie</h3>
-          <p>Know what's in the storeroom and each van, record what was used on which job, and see when stock
-            runs low.</p>
-        </article>
-        <article>
-          <h3>Your crew</h3>
-          <p>Invite a helper with a link on WhatsApp and assign jobs. Your crew see their day, not your prices
-            or invoices.</p>
-        </article>
+      <div class="extras" style="margin-top:24px">
+        <div><h3>Jobs and scheduling</h3><p>A simple two-week schedule. Tap the address for directions.</p></div>
+        <div><h3>Stock in every bakkie</h3><p>Know what's in the storeroom and each van, and what was used on which job.</p></div>
+        <div><h3>Your crew</h3><p>Invite a helper on WhatsApp. They see their day, not your prices.</p></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="split">
+  <section class="cover" id="contact">
+    <div class="wrap">
       <div>
-        <h2>Working alone?</h2>
-        <p>SharpPaid stays out of your way: no crew screens, no setup. Add a customer, do the job, get paid.</p>
+        <h2>Tired of chasing payments?</h2>
+        <p>SharpPaid is opening soon to its first businesses. Send us a note and we'll set you up.</p>
       </div>
-      <div>
-        <h2>Running a team?</h2>
-        <p>Give each person the right access. Owners and admins handle the money; crew see their jobs and record
-          the work.</p>
-      </div>
-    </section>
+      <a class="btn gold" href="mailto:help@sharppaid.co.za?subject=SharpPaid%20early%20access">help@sharppaid.co.za</a>
+    </div>
+  </section>
+</main>
 
-    <section class="trust">
-      <h2>Your business's information stays yours</h2>
-      <ul>
-        <li>Each business's data is kept strictly separate.</li>
-        <li>Secure sign-in, with two-step verification available.</li>
-        <li>Issued invoices can't be changed afterwards, so your records stay trustworthy.</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="contact">
-      <h2>Tired of chasing payments?</h2>
-      <p>SharpPaid is opening soon to its first businesses. Send us a note and we'll let you know when you can
-        start, and set you up.</p>
-      <p><a class="button" href="mailto:help@sharppaid.co.za?subject=SharpPaid%20early%20access">help@sharppaid.co.za</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 SharpPaid · <a href="mailto:help@sharppaid.co.za">help@sharppaid.co.za</a></p>
-  </footer>
+<footer>
+  <div class="wrap"><span>© 2026 SharpPaid</span><span>Your business's information stays yours: kept separate, never sold.</span></div>
+</footer>
 </body>
 </html>
