@@ -32,8 +32,9 @@
     <a class="brand" href="/"><svg width="36" height="36"><use href="#slip"/></svg><span>Sharp<b>Paid</b></span></a>
     <nav>
       <a href="#how">How it works</a>
-      <a href="#contact">Contact</a>
-      <a class="btn small gold" href="mailto:help@sharppaid.co.za?subject=SharpPaid%20early%20access">Get early access</a>
+      <a href="#pricing">Pricing</a>
+      <a data-app="/sign-in" href="/" hidden>Sign in</a>
+      <a class="btn small gold" data-app="/sign-up" href="mailto:help@sharppaid.co.za?subject=Early%20access%20to%20SharpPaid" data-live-text="Start free">Get early access</a>
     </nav>
   </div>
 </header>
@@ -41,14 +42,16 @@
 <main>
   <div class="wrap hero">
     <div>
-      <p class="kicker"><span>Coming soon</span>Made in South Africa</p>
+      <p class="kicker"><span>Free to start</span>Made in South Africa</p>
       <h1>Do the job.<br>Get paid.<br><span class="underline">Sharp sharp.</span></h1>
       <p class="lead">SharpPaid sends the quote, the invoice and the polite reminders, so you spend less time chasing
         money and more time on the tools.</p>
       <div class="actions">
-        <a class="btn" href="mailto:help@sharppaid.co.za?subject=SharpPaid%20early%20access">Get early access</a>
-        <a class="text" href="#how">See how it works</a>
+        <a class="btn" data-app="/sign-up" href="mailto:help@sharppaid.co.za?subject=Early%20access%20to%20SharpPaid" data-live-text="Start free">Get early access</a>
+        <a class="text" data-app="/sign-up?plan=pro" href="mailto:help@sharppaid.co.za?subject=Early%20access%20to%20SharpPaid" data-live-text="Start with Pro">Get early access</a>
       </div>
+      <p class="fine">Opening soon. Ask for early access and we'll let you know the day it opens. Free needs no card.
+        <span data-app-only hidden>Already using SharpPaid? <a data-app="/sign-in" href="/">Sign in</a></span></p>
     </div>
 
     <div class="slip" aria-hidden="true">
@@ -74,7 +77,7 @@
         <li><span class="no">01</span><h3>Quote from your phone</h3><p>Price the job on site and send the quote on WhatsApp or by email before you've left the driveway.</p></li>
         <li><span class="no">02</span><h3>Accepted with one tap</h3><p>Your customer opens the quote on their phone and accepts it. Ask for a deposit up front, so you're not paying for materials out of your own pocket.</p></li>
         <li><span class="no">03</span><h3>Invoice the moment you're done</h3><p>Turn the quote into an invoice in one tap. VAT-registered? 15% VAT and proper tax invoices are handled for you.</p></li>
-        <li><span class="no">04</span><h3>Easy to pay</h3><p>Every invoice has a "Pay now" button for card or instant EFT, plus your bank details with the invoice number as the reference.</p></li>
+        <li><span class="no">04</span><h3>Easy to pay</h3><p>Every invoice can have a "Pay now" button for card payments, plus your bank details with the invoice number as the reference.</p></li>
         <li><span class="no">05</span><h3>Reminders do the chasing</h3><p>When an invoice is late, SharpPaid sends a friendly reminder for you. No awkward phone calls.</p></li>
         <li><span class="no">06</span><h3>Know who owes you</h3><p>One screen shows what's outstanding, what's overdue and what's been paid this month.</p></li>
       </ol>
@@ -86,9 +89,45 @@
       <h2>And everything else the job needs</h2>
       <div class="extras" style="margin-top:24px">
         <div><h3>Jobs and scheduling</h3><p>A simple two-week schedule. Tap the address for directions.</p></div>
-        <div><h3>Stock in every bakkie</h3><p>Know what's in the storeroom and each van, and what was used on which job.</p></div>
-        <div><h3>Your crew</h3><p>Invite a helper on WhatsApp. They see their day, not your prices.</p></div>
+        <div><h3>Stock in every bakkie <span class="pro">Pro</span></h3><p>Know what's in the storeroom and each van, and what was used on which job.</p></div>
+        <div><h3>Your crew <span class="pro">Pro</span></h3><p>Send helpers their jobs on WhatsApp: directions, the customer's number and an "I'm done" button. No app needed, and they never see your prices.</p></div>
       </div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <h2>Pricing</h2>
+      <p class="intro">Start free. Upgrade when you take on crew or want to be paid by card.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3>Free</h3>
+          <p class="price">R0</p>
+          <ul>
+            <li>One business</li>
+            <li>Quotes your customers accept online</li>
+            <li>Invoices and tax invoices</li>
+            <li>Reminders that do the chasing</li>
+            <li>Know who owes you</li>
+          </ul>
+          <a class="btn" data-app="/sign-up" href="mailto:help@sharppaid.co.za?subject=Early%20access%20to%20SharpPaid" data-live-text="Start free">Get early access</a>
+        </div>
+        <div class="plan pro">
+          <h3>Pro</h3>
+          <p class="price">R249 <span>/ month</span></p>
+          <ul>
+            <li>Everything in Free, and:</li>
+            <li>Card payments with Yoco: Pay now on every invoice*</li>
+            <li>Crew: send helpers their jobs on WhatsApp</li>
+            <li>Stock in every bakkie, on your invoices</li>
+            <li>Your own logo on everything</li>
+            <li>More than one business</li>
+          </ul>
+          <a class="btn gold" data-app="/sign-up?plan=pro" href="mailto:help@sharppaid.co.za?subject=Early%20access%20to%20SharpPaid" data-live-text="Start with Pro">Get early access</a>
+        </div>
+      </div>
+      <p class="fine">* Needs your own Yoco account (free to sign up), Yoco's card fees apply, and no card machine is
+        needed. Pro is monthly and covers all your businesses; cancel any time.</p>
     </div>
   </section>
 
@@ -96,15 +135,28 @@
     <div class="wrap">
       <div>
         <h2>Tired of chasing payments?</h2>
-        <p>SharpPaid is opening soon to its first businesses. Send us a note and we'll set you up.</p>
+        <p>SharpPaid opens soon. Questions? Email <a href="mailto:help@sharppaid.co.za">help@sharppaid.co.za</a>.</p>
       </div>
-      <a class="btn gold" href="mailto:help@sharppaid.co.za?subject=SharpPaid%20early%20access">help@sharppaid.co.za</a>
+      <a class="btn gold" data-app="/sign-up" href="mailto:help@sharppaid.co.za?subject=Early%20access%20to%20SharpPaid" data-live-text="Start free">Get early access</a>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap"><span>© 2026 SharpPaid</span><span>Your business's information stays yours: kept separate, never sold.</span></div>
+  <div class="wrap"><span>© 2026 SharpPaid</span><span>Your business's information stays yours: kept separate, never sold.</span><span><a href="/terms">Terms</a> · <a href="/privacy">Privacy</a> · <a href="mailto:help@sharppaid.co.za">help@sharppaid.co.za</a></span></div>
 </footer>
+<script>
+  // Until the app is live, the buttons ask for early access by email and sign-in is hidden: nobody
+  // can register (docs/going-live.md says how to switch back). The app's own copy of the website,
+  // at /website/, keeps the real buttons for trying sign-in and sign-up locally.
+  if (location.pathname.startsWith('/website/')) {
+    document.querySelectorAll('[data-app]').forEach((link) => {
+      link.href = link.dataset.app;
+      link.textContent = link.dataset.liveText ?? link.textContent;
+      link.hidden = false;
+    });
+    document.querySelectorAll('[data-app-only]').forEach((element) => element.hidden = false);
+  }
+</script>
 </body>
 </html>
