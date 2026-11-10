@@ -8,6 +8,9 @@
 @font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 800; font-display: swap; src: url("fonts/barlow-condensed-800.woff2") format("woff2"); }
 @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/ibm-plex-mono-500.woff2") format("woff2"); }
 
+/* Hidden means hidden, whatever display a class gives (such as the buttons shown only once live) */
+[hidden] { display: none !important; }
+
 /* The duplicate book: the carbon-copy invoice book many tradespeople still use */
 :root {
   --paper: #f7f3ea;
@@ -52,6 +55,8 @@ h1 .underline { background: linear-gradient(transparent 68%, var(--gold) 68%, va
 .actions { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
 /* Pro and Premium wrap together, under the main button on phones */
 .more-plans { display: flex; gap: 22px; flex-wrap: wrap; }
+/* Before going live its buttons are hidden: no empty gap under the main button */
+.more-plans:not(:has(> :not([hidden]))) { display: none; }
 /* On phones the three buttons stack, the same width */
 @media (max-width: 520px) {
   .actions, .more-plans { flex-direction: column; align-items: stretch; width: 100%; }
