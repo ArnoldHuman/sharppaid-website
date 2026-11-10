@@ -50,7 +50,13 @@ h1 { font: 800 clamp(48px, 7vw, 86px)/.92 "Barlow Condensed", sans-serif; letter
 h1 .underline { background: linear-gradient(transparent 68%, var(--gold) 68%, var(--gold) 92%, transparent 92%); }
 .lead { font-size: 20px; color: var(--muted); max-width: 30em; margin: 0 0 30px; }
 .actions { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
-.actions a.text { font-weight: 600; }
+/* Pro and Premium wrap together, under the main button on phones */
+.more-plans { display: flex; gap: 22px; flex-wrap: wrap; }
+/* On phones the three buttons stack, the same width */
+@media (max-width: 520px) {
+  .actions, .more-plans { flex-direction: column; align-items: stretch; width: 100%; }
+  .actions .btn { text-align: center; }
+}
 
 /* The slip: perforated on the left, ruled lines, a rubber stamp */
 .slip { position: relative; background: #fff; padding: 26px 26px 22px 40px; transform: rotate(1.8deg);
