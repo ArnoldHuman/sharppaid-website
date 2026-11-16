@@ -149,8 +149,10 @@ span.pro { display: inline-block; background: var(--gold); color: var(--ink); fo
 .legal .save-pdf { margin: 0 0 8px; }
 @media print {
   body { background: #fff; }
-  header, footer, .legal .save-pdf { display: none; }
-  .legal { max-width: none; padding: 0; font-size: 11pt; }
+  /* The logo as a letterhead; the menu, footer and button are for the screen */
+  nav, footer, .legal .save-pdf { display: none; }
+  header .wrap { height: auto; padding: 0 0 12px; }
+  .legal { max-width: none; padding: 20px 0 0; font-size: 11pt; }
   .legal h2 { break-after: avoid; }
   .legal li, .legal tr { break-inside: avoid; }
   .legal table { display: table; }
