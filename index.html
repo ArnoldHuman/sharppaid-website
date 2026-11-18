@@ -34,8 +34,8 @@
       <a href="#how">How it works</a>
       <a href="#pricing">Pricing</a>
       <a data-app="/sign-in" href="/" hidden>Sign in</a>
-      <!-- Sign up shows the three plans, each with its own button -->
-      <a class="btn small gold" data-app="#pricing" href="#pricing" data-live-text="Sign up">Get early access</a>
+      <!-- Sign up goes straight to sign-up; the plan is chosen in the app's setup (Free selected) -->
+      <a class="btn small gold" data-app="/sign-up" href="#pricing" data-live-text="Sign up">Get early access</a>
     </nav>
   </div>
 </header>
@@ -49,10 +49,8 @@
         money and more time on the tools.</p>
       <div class="actions">
         <a class="btn" data-app="/sign-up" href="mailto:help@sharppaid.co.za?subject=Early%20access%20to%20SharpPaid" data-live-text="Start free">Get early access</a>
-        <span class="more-plans">
-          <a class="btn" data-app="/sign-up?plan=pro" href="mailto:help@sharppaid.co.za?subject=Early%20access%20to%20SharpPaid" data-live-text="Start with Pro" hidden>Get early access</a>
-          <a class="btn" data-app="/sign-up?plan=premium" href="mailto:help@sharppaid.co.za?subject=Early%20access%20to%20SharpPaid" data-live-text="Start with Premium" hidden>Get early access</a>
-        </span>
+        <!-- One button: the plans are chosen in the pricing cards, or in the app's setup -->
+        <a class="plans-link" href="#pricing">See plans and prices</a>
       </div>
       <p class="fine">Opening soon. Ask for early access and we'll let you know the day it opens. Free needs no card.
         <span data-app-only hidden>Already using SharpPaid? <a data-app="/sign-in" href="/">Sign in</a></span></p>
@@ -153,7 +151,7 @@
         <h2>Tired of chasing payments?</h2>
         <p>SharpPaid opens soon. Questions? Email <a href="mailto:help@sharppaid.co.za">help@sharppaid.co.za</a>.</p>
       </div>
-      <a class="btn gold" data-app="#pricing" href="#pricing" data-live-text="Sign up">Get early access</a>
+      <a class="btn gold" data-app="/sign-up" href="#pricing" data-live-text="Sign up">Get early access</a>
     </div>
   </section>
 </main>
